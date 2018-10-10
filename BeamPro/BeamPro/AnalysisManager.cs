@@ -127,9 +127,9 @@ namespace BeamPro
                     _error = Math.Sqrt(_error / displacementsSum.Count);
                 }
                 worker.ReportProgress(100 * (int)Math.Min(1.0d, AllowableError / _error));
-                if (loadSteps > 500)
+                if (loadSteps > 5000)
                 {
-                    System.Windows.Forms.MessageBox.Show("Analysis has exceeded 500 load steps.");
+                    System.Windows.Forms.MessageBox.Show("Analysis has exceeded 5000 load steps.");
                 }
                 loadSteps *= 2;
             } while (_error > AllowableError);
@@ -142,11 +142,11 @@ namespace BeamPro
             _forces[1] = forcesSum[1];
             for (int i = 3; i < _forces.Count; i += 3)
             {
-                _forces[i - 1] = _elements[i / 3 - 1].GetInternalMoment();// - forcesSum[i - 1]; forceSum add is redundant
+                _forces[i - 1] = _elements[i / 3 - 1].GetInternalMoment();
                 _forces[i] = _forces[i - 3] + forcesSum[i];
                 _forces[i + 1] = _forces[i - 2] + forcesSum[i + 1];
             }
-            _forces[_forces.Count - 1] = _forces[_forces.Count - 4];// - forcesSum[_forces.Count - 1]; forceSum add is redundant
+            _forces[_forces.Count - 1] = _forces[_forces.Count - 4];
             for (int i = 0; i < _forces.Count - 3; i += 3)
             {
                 _stresses.Add(_forces[i].Value / _elements[i / 3].A);
