@@ -102,7 +102,7 @@
             // toolStripLoadButton
             // 
             this.toolStripLoadButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripLoadButton.Image = global::BeamPro.Properties.Resources.Load;
+            this.toolStripLoadButton.Image = global::BeamPro.Properties.Resources.LoadIcon;
             this.toolStripLoadButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripLoadButton.Name = "toolStripLoadButton";
             this.toolStripLoadButton.Size = new System.Drawing.Size(23, 22);

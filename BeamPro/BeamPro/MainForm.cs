@@ -202,7 +202,11 @@ namespace BeamPro
         // Load button event handler
         private void toolStripLoadButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog selectFileDialog = new OpenFileDialog();
+			BasicConditionInputsForm.ResetCount();
+			BasicSectionInputsForm.ResetCount();
+			NestedSectionInputsForm.ResetCount();
+
+			OpenFileDialog selectFileDialog = new OpenFileDialog();
             if (workingFile == String.Empty)
             {
                 selectFileDialog.InitialDirectory = MainForm.DefaultDirectory;

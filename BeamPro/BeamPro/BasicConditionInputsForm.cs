@@ -13,11 +13,17 @@ namespace BeamPro
     public partial class BasicConditionInputsForm : ElementInputsForm
     {
         // Private objects
-        private static int BasicConditionCount = 1;
+        public static int BasicConditionCount { get; private set; }
         private const string ElementType = "Basic Condition ";
 
         // Public accessors
         //reserved
+
+		// Static constructor
+		static BasicConditionInputsForm()
+		{
+			BasicConditionCount = 0;
+		}
 
         // Class creation method
         public BasicConditionInputsForm() : base(ElementType + (BasicConditionCount++).ToString(), new BasicConditionInputsControl())
@@ -50,6 +56,14 @@ namespace BeamPro
                 nodeList[nodeList.Count - 1].FixedDOF[2]
                     = (ip1.Qdof || nodeList[nodeList.Count - 1].FixedDOF[2]);
             }
-        }
-    }
+		}
+
+		/// <summary>
+		/// Method to reset the element count variable so that loaded analyses will use correct numbering.
+		/// </summary>
+		public static void ResetCount()
+		{
+			BasicConditionCount = 0;
+		}
+	}
 }

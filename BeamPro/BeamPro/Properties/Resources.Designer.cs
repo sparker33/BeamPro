@@ -113,9 +113,9 @@ namespace BeamPro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Load {
+        internal static System.Drawing.Bitmap LoadIcon {
             get {
-                object obj = ResourceManager.GetObject("Load", resourceCulture);
+                object obj = ResourceManager.GetObject("LoadIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace BeamPro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ResetView {
+        internal static System.Drawing.Bitmap NestedSectionDragEnteredIcon {
             get {
-                object obj = ResourceManager.GetObject("ResetView", resourceCulture);
+                object obj = ResourceManager.GetObject("NestedSectionDragEnteredIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,29 @@ namespace BeamPro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Save {
+        internal static System.Drawing.Bitmap NestedSectionIcon {
             get {
-                object obj = ResourceManager.GetObject("Save", resourceCulture);
+                object obj = ResourceManager.GetObject("NestedSectionIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ResetViewIcon {
+            get {
+                object obj = ResourceManager.GetObject("ResetViewIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveIcon {
+            get {
+                object obj = ResourceManager.GetObject("SaveIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

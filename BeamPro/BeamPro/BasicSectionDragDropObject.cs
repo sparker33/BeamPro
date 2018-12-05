@@ -15,7 +15,7 @@ namespace BeamPro
         private Bitmap dragEnterBackroungImage;
 
         // Public objects
-        public static int BasicSectionNumber = 0;
+        //reserved
 
         // Default class constructor
         public BasicSectionDragDropObject() : base()
@@ -23,7 +23,7 @@ namespace BeamPro
             standardBackgroundImage = new Bitmap(Properties.Resources.BasicSectionIcon, Size);
             dragEnterBackroungImage = new Bitmap(Properties.Resources.BasicSectionDragEnteredIcon, Size);
             Graphics g = Graphics.FromImage(standardBackgroundImage);
-            g.DrawString((BasicSectionNumber++).ToString(),
+            g.DrawString(BasicSectionInputsForm.BasicSectionCount.ToString(),
                 new Font("Arial", 8),
                 new SolidBrush(Color.Black),
                 ClientRectangle);
@@ -40,7 +40,7 @@ namespace BeamPro
             standardBackgroundImage = new Bitmap(Properties.Resources.BasicSectionIcon, Size);
             dragEnterBackroungImage = new Bitmap(Properties.Resources.BasicSectionDragEnteredIcon, Size);
             Graphics g = Graphics.FromImage(standardBackgroundImage);
-            g.DrawString((BasicSectionNumber++).ToString(),
+            g.DrawString(BasicSectionInputsForm.BasicSectionCount.ToString(),
                 new Font("Arial", 8),
                 new SolidBrush(Color.Black),
                 ClientRectangle);

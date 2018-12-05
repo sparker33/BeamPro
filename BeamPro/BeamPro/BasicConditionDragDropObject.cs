@@ -15,7 +15,7 @@ namespace BeamPro
         private Bitmap dragEnterBackroungImage;
 
         // Public objects
-        public static int BasicConditionNumber = 0;
+		//reserved
 
         // Default class constructor
         public BasicConditionDragDropObject() : base()
@@ -23,7 +23,7 @@ namespace BeamPro
             standardBackgroundImage = new Bitmap(Properties.Resources.BasicConditionIcon, Size);
             dragEnterBackroungImage = new Bitmap(Properties.Resources.BasicConditionDragEnteredIcon, Size);
             Graphics g = Graphics.FromImage(standardBackgroundImage);
-            g.DrawString((BasicConditionNumber++).ToString(),
+            g.DrawString(BasicConditionInputsForm.BasicConditionCount.ToString(),
                 new Font("Arial", 8),
                 new SolidBrush(Color.Black),
                 ClientRectangle);
@@ -40,7 +40,7 @@ namespace BeamPro
             standardBackgroundImage = new Bitmap(Properties.Resources.BasicConditionIcon, Size);
             dragEnterBackroungImage = new Bitmap(Properties.Resources.BasicConditionDragEnteredIcon, Size);
             Graphics g = Graphics.FromImage(standardBackgroundImage);
-            g.DrawString((BasicConditionNumber++).ToString(),
+            g.DrawString(BasicConditionInputsForm.BasicConditionCount.ToString(),
                 new Font("Arial", 8),
                 new SolidBrush(Color.Black),
                 ClientRectangle);

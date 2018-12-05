@@ -13,14 +13,20 @@ namespace BeamPro
     public partial class BasicSectionInputsForm : ElementInputsForm
     {
         // Private objects
-        private static int BasicSectionCount = 1;
+        public static int BasicSectionCount { get; private set; }
         private const string ElementType = "Basic Section ";
 
-        // Public accessors
-        //reserved
+		// Public accessors
+		//reserved
 
-        // Class creation method
-        public BasicSectionInputsForm() : base(ElementType + (BasicSectionCount++).ToString(), new BasicSectionInputsControl())
+		// Static constructor
+		static BasicSectionInputsForm()
+		{
+			BasicSectionCount = 0;
+		}
+
+		// Class creation method
+		public BasicSectionInputsForm() : base(ElementType + (BasicSectionCount++).ToString(), new BasicSectionInputsControl())
         {
             InitializeComponent();
         }
@@ -55,5 +61,13 @@ namespace BeamPro
                     nodeList[nodeList.Count - 1], ip0));
             }
         }
+
+		/// <summary>
+		/// Method to reset the element count variable so that loaded analyses will use correct numbering.
+		/// </summary>
+		public static void ResetCount()
+		{
+			BasicSectionCount = 0;
+		}
     }
 }
