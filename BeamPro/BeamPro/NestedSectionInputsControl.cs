@@ -277,7 +277,7 @@ namespace BeamPro
 		public NestedSectionInputsControl() : base()
 		{
 			InitializeComponent();
-			// Populate and initialize selected index for comboboxes
+			// Populate options and initialize selected index for comboboxes
 			//code here
 			radialDefiningBeamDropDown.SelectedIndex = 0;
 		}
